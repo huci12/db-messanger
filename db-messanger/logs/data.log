@@ -1,0 +1,602 @@
+2022-01-30 16:22:40 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 24052 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:22:40 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:22:40 [INFO ] [DeferredLog.java]logTo(255) : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-30 16:22:40 [INFO ] [DeferredLog.java]logTo(255) : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-30 16:22:42 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:22:42 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:22:42 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:22:42 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:22:42 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 1552 ms
+2022-01-30 16:22:43 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:22:43 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:22:43 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 3.297 seconds (JVM running for 6.684)
+2022-01-30 16:22:54 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-30 16:22:54 [INFO ] [FrameworkServlet.java]initServletBean(525) : Initializing Servlet 'dispatcherServlet'
+2022-01-30 16:22:54 [INFO ] [FrameworkServlet.java]initServletBean(547) : Completed initialization in 2 ms
+2022-01-30 16:22:58 [ERROR] [DirectJDKLog.java]log(175) : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Circular view path [main]: would dispatch back to the current handler URL [/main] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)] with root cause
+javax.servlet.ServletException: Circular view path [main]: would dispatch back to the current handler URL [/main] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)
+	at org.springframework.web.servlet.view.InternalResourceView.prepareForRendering(InternalResourceView.java:210)
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:148)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2022-01-30 16:23:36 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 24052 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:23:36 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:23:41 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 29076 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:23:41 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:23:42 [INFO ] [DeferredLog.java]logTo(255) : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-30 16:23:42 [INFO ] [DeferredLog.java]logTo(255) : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-30 16:23:43 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:23:43 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:23:43 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:23:43 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:23:43 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 1751 ms
+2022-01-30 16:23:44 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:23:44 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:23:44 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 3.346 seconds (JVM running for 6.529)
+2022-01-30 16:23:52 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-30 16:23:52 [INFO ] [FrameworkServlet.java]initServletBean(525) : Initializing Servlet 'dispatcherServlet'
+2022-01-30 16:23:52 [INFO ] [FrameworkServlet.java]initServletBean(547) : Completed initialization in 2 ms
+2022-01-30 16:23:58 [INFO ] [SpringApplicationAdminMXBeanRegistrar.java]shutdown(159) : Application shutdown requested.
+2022-01-30 16:24:06 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 10600 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:24:06 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:24:06 [INFO ] [DeferredLog.java]logTo(255) : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-30 16:24:06 [INFO ] [DeferredLog.java]logTo(255) : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-30 16:24:08 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:24:08 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:24:08 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:24:08 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:24:08 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 1589 ms
+2022-01-30 16:24:09 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:24:09 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:24:09 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 3.127 seconds (JVM running for 5.482)
+2022-01-30 16:24:19 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 10600 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:24:19 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:24:19 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:24:19 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:24:19 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:24:19 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:24:19 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 429 ms
+2022-01-30 16:24:19 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:24:19 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:24:19 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.704 seconds (JVM running for 16.067)
+2022-01-30 16:24:19 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:24:21 [INFO ] [SpringApplicationAdminMXBeanRegistrar.java]shutdown(159) : Application shutdown requested.
+2022-01-30 16:24:22 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 10600 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:24:22 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:24:23 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:24:23 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:24:23 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:24:23 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:24:23 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 393 ms
+2022-01-30 16:24:23 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:24:23 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:24:23 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.668 seconds (JVM running for 19.801)
+2022-01-30 16:24:23 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:24:30 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-30 16:24:30 [INFO ] [FrameworkServlet.java]initServletBean(525) : Initializing Servlet 'dispatcherServlet'
+2022-01-30 16:24:30 [INFO ] [FrameworkServlet.java]initServletBean(547) : Completed initialization in 2 ms
+2022-01-30 16:24:42 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:24:42 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:24:42 [INFO ] [DeferredLog.java]logTo(255) : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-30 16:24:42 [INFO ] [DeferredLog.java]logTo(255) : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-30 16:24:44 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:24:44 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:24:44 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:24:44 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:24:44 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 1642 ms
+2022-01-30 16:24:45 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:24:45 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:24:45 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 3.131 seconds (JVM running for 6.094)
+2022-01-30 16:26:43 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:26:43 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:26:44 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:26:44 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:26:44 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:26:44 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:26:44 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 392 ms
+2022-01-30 16:26:44 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:26:44 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:26:44 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.66 seconds (JVM running for 125.258)
+2022-01-30 16:26:44 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:26:53 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:26:53 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:26:53 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:26:53 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:26:53 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:26:53 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:26:53 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 265 ms
+2022-01-30 16:26:53 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:26:53 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:26:53 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.572 seconds (JVM running for 134.653)
+2022-01-30 16:26:53 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:27:00 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:27:00 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:27:00 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:27:00 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:27:00 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:27:00 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:27:00 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 327 ms
+2022-01-30 16:27:00 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:27:00 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:27:00 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.568 seconds (JVM running for 141.716)
+2022-01-30 16:27:00 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:27:10 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:27:10 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:27:10 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:27:10 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:27:10 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:27:10 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:27:10 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 314 ms
+2022-01-30 16:27:10 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:27:10 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:27:10 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.571 seconds (JVM running for 151.772)
+2022-01-30 16:27:10 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:27:32 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:27:32 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:27:32 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:27:32 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:27:32 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:27:32 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:27:32 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 369 ms
+2022-01-30 16:27:33 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:27:33 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:27:33 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.595 seconds (JVM running for 174.108)
+2022-01-30 16:27:33 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:27:53 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:27:53 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:27:54 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:27:54 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:27:54 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:27:54 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:27:54 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 285 ms
+2022-01-30 16:27:54 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:27:54 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:27:54 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.653 seconds (JVM running for 195.548)
+2022-01-30 16:27:54 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:27:57 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:27:57 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:27:57 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:27:57 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:27:57 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:27:57 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:27:57 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 279 ms
+2022-01-30 16:27:57 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:27:57 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:27:57 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.561 seconds (JVM running for 198.614)
+2022-01-30 16:27:57 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:28:01 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:28:01 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:28:01 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:28:01 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:28:01 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:28:01 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:28:01 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 262 ms
+2022-01-30 16:28:02 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:28:02 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:28:02 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.595 seconds (JVM running for 203.236)
+2022-01-30 16:28:02 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:29:03 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:29:03 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:29:03 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:29:03 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:29:03 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:29:03 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:29:03 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 307 ms
+2022-01-30 16:29:03 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:29:03 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:29:03 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.527 seconds (JVM running for 264.831)
+2022-01-30 16:29:03 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:29:10 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:29:10 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:29:10 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:29:10 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:29:10 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:29:10 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:29:10 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 287 ms
+2022-01-30 16:29:10 [WARN ] [AbstractApplicationContext.java]refresh(591) : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messangerviceImpl' defined in file [D:\WorkSpace\MyProject\codewar\db-messanger\target\classes\com\pro\messanger\serviceImpl\MessangerviceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.pro.messanger.serviceImpl.MessangerviceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Autowired cannot be resolved to a type
+
+2022-01-30 16:29:10 [INFO ] [DirectJDKLog.java]log(173) : Stopping service [Tomcat]
+2022-01-30 16:29:10 [INFO ] [ConditionEvaluationReportLoggingListener.java]logMessage(136) : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-30 16:29:10 [ERROR] [SpringApplication.java]reportFailure(821) : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messangerviceImpl' defined in file [D:\WorkSpace\MyProject\codewar\db-messanger\target\classes\com\pro\messanger\serviceImpl\MessangerviceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.pro.messanger.serviceImpl.MessangerviceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Autowired cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.pro.messanger.DbMessangerApplication.main(DbMessangerApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.pro.messanger.serviceImpl.MessangerviceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Autowired cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Autowired cannot be resolved to a type
+
+	at com.pro.messanger.serviceImpl.MessangerviceImpl.<init>(MessangerviceImpl.java:14)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 24 common frames omitted
+2022-01-30 16:29:12 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:29:12 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:29:12 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:29:12 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:29:12 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:29:12 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:29:12 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 324 ms
+2022-01-30 16:29:12 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:29:12 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:29:12 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.584 seconds (JVM running for 273.8)
+2022-01-30 16:29:12 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:29:15 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:29:15 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:29:16 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:29:16 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:29:16 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:29:16 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:29:16 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 282 ms
+2022-01-30 16:29:16 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:29:16 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:29:16 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.511 seconds (JVM running for 277.243)
+2022-01-30 16:29:16 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:29:18 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:29:18 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:29:19 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:29:19 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:29:19 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:29:19 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:29:19 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 256 ms
+2022-01-30 16:29:19 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:29:19 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:29:19 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.486 seconds (JVM running for 280.329)
+2022-01-30 16:29:19 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:30:09 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:30:09 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:30:09 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:30:09 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:30:09 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:30:09 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:30:09 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 270 ms
+2022-01-30 16:30:09 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:30:09 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:30:09 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.473 seconds (JVM running for 330.727)
+2022-01-30 16:30:09 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:30:12 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:30:12 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:30:12 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:30:12 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:30:12 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:30:13 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:30:13 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 407 ms
+2022-01-30 16:30:13 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:30:13 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:30:13 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.632 seconds (JVM running for 334.206)
+2022-01-30 16:30:13 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:30:16 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:30:16 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:30:16 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:30:16 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:30:16 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:30:16 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:30:16 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 249 ms
+2022-01-30 16:30:16 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:30:16 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:30:16 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.517 seconds (JVM running for 337.655)
+2022-01-30 16:30:16 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:30:31 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:30:31 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:30:31 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:30:31 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:30:31 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:30:31 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:30:31 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 263 ms
+2022-01-30 16:30:31 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:30:31 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:30:32 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.518 seconds (JVM running for 353.015)
+2022-01-30 16:30:32 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:30:42 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:30:42 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:30:42 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:30:42 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:30:42 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:30:42 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:30:42 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 255 ms
+2022-01-30 16:30:42 [WARN ] [AbstractApplicationContext.java]refresh(591) : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messangerMainController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.pro.messanger.web.MessangerMainController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3dd98a47]
+2022-01-30 16:30:42 [INFO ] [DirectJDKLog.java]log(173) : Stopping service [Tomcat]
+2022-01-30 16:30:42 [INFO ] [ConditionEvaluationReportLoggingListener.java]logMessage(136) : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-30 16:30:42 [ERROR] [SpringApplication.java]reportFailure(821) : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messangerMainController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.pro.messanger.web.MessangerMainController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3dd98a47]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.pro.messanger.DbMessangerApplication.main(DbMessangerApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.pro.messanger.web.MessangerMainController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3dd98a47]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 23 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: List
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3171)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2314)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: List
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:415)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 29 common frames omitted
+2022-01-30 16:32:26 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 5448 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:32:26 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:32:27 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:32:27 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:32:27 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:32:27 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:32:27 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 227 ms
+2022-01-30 16:32:27 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:32:27 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:32:27 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.459 seconds (JVM running for 468.271)
+2022-01-30 16:32:27 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:32:29 [INFO ] [SpringApplicationAdminMXBeanRegistrar.java]shutdown(159) : Application shutdown requested.
+2022-01-30 16:33:18 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 29024 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:33:18 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:33:18 [INFO ] [DeferredLog.java]logTo(255) : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-30 16:33:18 [INFO ] [DeferredLog.java]logTo(255) : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-30 16:33:20 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:33:20 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:33:20 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:33:20 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:33:20 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 1554 ms
+2022-01-30 16:33:21 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:33:21 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:33:21 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 3.031 seconds (JVM running for 5.53)
+2022-01-30 16:33:47 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-30 16:33:47 [INFO ] [FrameworkServlet.java]initServletBean(525) : Initializing Servlet 'dispatcherServlet'
+2022-01-30 16:33:47 [INFO ] [FrameworkServlet.java]initServletBean(547) : Completed initialization in 1 ms
+2022-01-30 16:33:47 [INFO ] [HikariDataSource.java]getConnection(110) : HikariPool-1 - Starting...
+2022-01-30 16:33:47 [ERROR] [DirectJDKLog.java]log(175) : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.RuntimeException: Driver org.mariadb.jdbc.Driver claims to not accept jdbcUrl, =jdbc:mariadb://127.0.0.1:3306/gw
+### The error may exist in file [D:\WorkSpace\MyProject\codewar\db-messanger\target\classes\mappers\MESSAGE_SQL.xml]
+### The error may involve com.pro.messanger.dao.MessangerDao.selectMessageList
+### The error occurred while executing a query
+### Cause: java.lang.RuntimeException: Driver org.mariadb.jdbc.Driver claims to not accept jdbcUrl, =jdbc:mariadb://127.0.0.1:3306/gw] with root cause
+java.lang.RuntimeException: Driver org.mariadb.jdbc.Driver claims to not accept jdbcUrl, =jdbc:mariadb://127.0.0.1:3306/gw
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:331)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:114)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:108)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy59.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at com.sun.proxy.$Proxy60.selectMessageList(Unknown Source)
+	at com.pro.messanger.serviceImpl.MessangerviceImpl.getMessageList(MessangerviceImpl.java:21)
+	at com.pro.messanger.web.MessangerMainController.messageMain(MessangerMainController.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2022-01-30 16:35:01 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 29024 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:35:01 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:35:02 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:35:02 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:35:02 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:35:02 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:35:02 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 383 ms
+2022-01-30 16:35:02 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:35:02 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:35:02 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.711 seconds (JVM running for 106.631)
+2022-01-30 16:35:02 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:35:43 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 29024 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:35:43 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:35:43 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:35:43 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:35:43 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:35:43 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:35:43 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 327 ms
+2022-01-30 16:35:43 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:35:43 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:35:43 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 0.622 seconds (JVM running for 147.723)
+2022-01-30 16:35:43 [INFO ] [ConditionEvaluationDeltaLoggingListener.java]onApplicationEvent(63) : Condition evaluation unchanged
+2022-01-30 16:35:59 [INFO ] [SpringApplicationAdminMXBeanRegistrar.java]shutdown(159) : Application shutdown requested.
+2022-01-30 16:36:07 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 23132 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 16:36:07 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 16:36:07 [INFO ] [DeferredLog.java]logTo(255) : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-30 16:36:07 [INFO ] [DeferredLog.java]logTo(255) : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-30 16:36:09 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 16:36:09 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 16:36:09 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 16:36:09 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 16:36:09 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 1783 ms
+2022-01-30 16:36:10 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 16:36:10 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 16:36:10 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 3.349 seconds (JVM running for 6.284)
+2022-01-30 16:36:27 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-30 16:36:27 [INFO ] [FrameworkServlet.java]initServletBean(525) : Initializing Servlet 'dispatcherServlet'
+2022-01-30 16:36:27 [INFO ] [FrameworkServlet.java]initServletBean(547) : Completed initialization in 1 ms
+2022-01-30 16:36:27 [INFO ] [HikariDataSource.java]getConnection(110) : HikariPool-1 - Starting...
+2022-01-30 16:36:28 [INFO ] [HikariDataSource.java]getConnection(123) : HikariPool-1 - Start completed.
+2022-01-30 16:57:54 [INFO ] [SpringApplicationAdminMXBeanRegistrar.java]shutdown(159) : Application shutdown requested.
+2022-01-30 16:57:55 [INFO ] [HikariDataSource.java]close(350) : HikariPool-1 - Shutdown initiated...
+2022-01-30 16:57:55 [INFO ] [HikariDataSource.java]close(352) : HikariPool-1 - Shutdown completed.
+2022-01-30 17:05:55 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting DbMessangerApplication using Java 12.0.2 on CHOI-GRAM with PID 2724 (D:\WorkSpace\MyProject\codewar\db-messanger\target\classes started by user in D:\WorkSpace\MyProject\codewar\db-messanger)
+2022-01-30 17:05:55 [INFO ] [SpringApplication.java]logStartupProfileInfo(637) : No active profile set, falling back to default profiles: default
+2022-01-30 17:05:55 [INFO ] [DeferredLog.java]logTo(255) : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-30 17:05:55 [INFO ] [DeferredLog.java]logTo(255) : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-30 17:05:57 [INFO ] [TomcatWebServer.java]initialize(108) : Tomcat initialized with port(s): 8080 (http)
+2022-01-30 17:05:57 [INFO ] [DirectJDKLog.java]log(173) : Starting service [Tomcat]
+2022-01-30 17:05:57 [INFO ] [DirectJDKLog.java]log(173) : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-30 17:05:57 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring embedded WebApplicationContext
+2022-01-30 17:05:57 [INFO ] [ServletWebServerApplicationContext.java]prepareWebApplicationContext(290) : Root WebApplicationContext: initialization completed in 1956 ms
+2022-01-30 17:05:58 [INFO ] [OptionalLiveReloadServer.java]startServer(58) : LiveReload server is running on port 35729
+2022-01-30 17:05:58 [INFO ] [TomcatWebServer.java]start(220) : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-30 17:05:58 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started DbMessangerApplication in 3.518 seconds (JVM running for 6.383)
+2022-01-30 17:06:14 [INFO ] [DirectJDKLog.java]log(173) : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-30 17:06:14 [INFO ] [FrameworkServlet.java]initServletBean(525) : Initializing Servlet 'dispatcherServlet'
+2022-01-30 17:06:14 [INFO ] [FrameworkServlet.java]initServletBean(547) : Completed initialization in 3 ms
+2022-01-30 17:06:18 [INFO ] [HikariDataSource.java]getConnection(110) : HikariPool-1 - Starting...
+2022-01-30 17:06:18 [INFO ] [HikariDataSource.java]getConnection(123) : HikariPool-1 - Start completed.

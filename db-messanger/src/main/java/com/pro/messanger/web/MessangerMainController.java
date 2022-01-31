@@ -26,4 +26,7 @@ public class MessangerMainController {
 	public List<Map<String,Object>> messageMain(HttpServletRequest req) {
 		return messangerService.getMessageList();
 	}
+	
+	
+	
 }
